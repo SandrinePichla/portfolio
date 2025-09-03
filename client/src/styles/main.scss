@@ -1,16 +1,41 @@
 @use "sass:math";
-@import "./variables";
-@import "./mixins";
-@import "./components/header";
-@import "./components/footer";
+
+// ========== IMPORTS ==========
+// Import des variables d'abord (nécessaires pour tous les autres fichiers)
+@use './variables' as *; // Imports toutes les variables sans leur préfixe
+@use './mixins';
+
+// Import des composants de layout
+@use './components/header';
+@use './components/footer';
+
+// Import des pages
+
+
+// Import des composants réutilisables
+
+/* ---------- Fonts (Vite) ---------- */
+@font-face {
+  font-family: "Dayrom"; /* harmonise la casse */
+  src:
+    url("../assets/fonts/dayrom.woff") format("woff"),
+    url("../assets/fonts/dayrom.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root { scroll-behavior: smooth; } /* smooth scroll natif */
-body {
-  font-family: "Epilogue", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  margin: 0; color: #222; background: #fff;
-}
-main { scroll-margin-top: 80px; } /* si header fixed */
-section { padding: 72px 20px; }
+/* Base générique */
+
+body  { margin: 0; color: $ink; background: $bg; font-family: $ff-ui; }
+main  { min-height: 60vh; }
+section{ padding: 72px 20px; }
+h1,h2,h3, .header__name { font-family: $ff; } /* titres façon CV */
+
+/* Conteneur générique */
+.container { max-width: $container; margin-inline: auto; padding-inline: 20px; }
 
 .header { /* BEM d’exemple */
   position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid #eee;

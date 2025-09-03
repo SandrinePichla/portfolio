@@ -5,34 +5,26 @@
 
 // ========== COULEURS ==========
 
-// Couleur principale de l'application (rouge Kasa)
-$primary-color: #FF6060;      // Rouge Kasa
+/* Couleurs */
+$navy: #12122E;       // fond bandeau / header / pied de page CV
+$gold: #8C7D5A;       // titres, séparateurs, rôle, accents
+$ink:  #202022;       // texte sombre
+$muted:#6B6B6B;       // texte atténué
+$bg:   #FFFFFF;       // fond page
 
-// Couleurs de fonds
-$background-white: #FFFFFF;  // Fond blanc par défaut
-$background-light: #F6F6F6;   // Fond gris clair (utilisé pour les grilles, conteneurs)
-$background-dark: #000000;    // Fond noir (footer uniquement)
+/* Typo */
+$ff: "Dayrom", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+$ff-ui:       system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-// Couleurs de texte
-$text-default: #000000;       // Texte principal, nav
-$text-light: #FFFFFF;         // Texte clair (h3, h4, footer)
+/* Dimensions / layout */
+$container: 1100px;
+$header-h:  68px;
+$radius:    14px;
+$shadow:    0 5px 18px rgba(0,0,0,.06);
 
-// Couleurs spécifiques aux composants
-$star-color-default: #E3E3E3; // Couleur des étoiles vides (rating)
-$star-color-filled: #FF6060; // Couleur des étoiles pleines (rating)
-$arrow-color: #FFFFFF; // Couleur des flèches de navigation (slideshow)
-$counter-color: #FFFFFF; // Couleur du compteur d'images (slideshow)'
-
-// ========== TYPOGRAPHIE ==========
-
-// Police principale de l'application
-$font-family-base: 'Montserrat', sans-serif;
-
-// ========== LAYOUT ==========
-
-// Largeurs maximales des conteneurs
-$container-desktop: 1440px;  // Largeur max pour desktop
-$container-mobile: 375px;  // Largeur de référence mobile
+/* Utilitaires */
+$sep-w: 72px;
+$sep-h: 3px;
 
 // ========== BREAKPOINTS ==========
 // Points de rupture pour le responsive design

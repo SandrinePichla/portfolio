@@ -9,7 +9,10 @@ export default function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      {/* Exemple futur : <Route path="/project/:slug" element={<ProjectDetail />} /> */}
+      {/* /projects, /skills, /resume, /contact → même page, on scrollera vers la section */}
+      <Route path="/:section" element={<Landing />} />
+      {/* sécurité : toute autre route retombe sur la landing */}
+      <Route path="*" element={<Landing />} />
     </Routes>
   );
 }

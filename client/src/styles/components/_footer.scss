@@ -1,7 +1,25 @@
+@import "../variables";
+
 .footer {
-  border-top: 1px solid #eee;
-  padding: 16px 20px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
+  background: $navy; color: #fff; border-top: 1px solid rgba(255,255,255,.06);
+
+  &__icon { width: 18px; height: 18px; margin-right: 8px; vertical-align: -2px; }
+
+  &__inner { max-width: $container; margin-inline: auto; padding: 24px 20px 36px; }
+
+  &__meta {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 10px 14px; justify-content: center; margin-bottom: 12px;
+  }
+
+  &__chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: #fff; text-decoration: none; font: 600 14px/1.2 $ff;
+    opacity: .9; &:hover { opacity: 1; color: $gold; }
+  }
+
+  &__dot { width: 8px; height: 8px; border-radius: 50%; background: $gold; box-shadow: 0 0 0 2px rgba(140,125,90,.15); }
+  &__sep { width: 26px; height: 3px; background: $gold; border-radius: 999px; display: inline-block; transform: translateY(1px); }
+
+  &__copy { text-align: center; color: rgba(255,255,255,.7); font: 400 13px/1.5 $ff; margin: 8px 0 0; }
 }

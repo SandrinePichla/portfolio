@@ -1,0 +1,32 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+
+  &__brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: #111;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0; padding: 0;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}

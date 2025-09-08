@@ -24,6 +24,7 @@
     .header__name {
       font: 800 22px/1 $ff;
       margin-top: 2px;
+      
 
       &::after {
         content: ""; display: block; height: $sep-h; width: $sep-w;

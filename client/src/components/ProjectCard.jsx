@@ -1,18 +1,36 @@
 export default function ProjectCard({ project }) {
+  if (!project) return null;
+
+  const codeUrl = project.repoUrl || project.githubUrl || "";
+  const demoUrl = project.demoUrl || "";
+
   return (
     <article className="project-card">
-      {project.cover && <img src={project.cover} alt={project.title} />}
-      <h3>{project.title}</h3>
-      <p>{project.description}</p>
-      <div className="project-card__links">
-        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">Code</a>}
-        {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Démo</a>}
-      </div>
-      {project.tags?.length > 0 && (
+      <h3 className="project-card__title">{project.title}</h3>
+      {project.description && (
+        <p className="project-card__desc">{project.description}</p>
+      )}
+
+      {Array.isArray(project.tags) && project.tags.length > 0 && (
         <ul className="project-card__tags">
-          {project.tags.map(t => <li key={t}>{t}</li>)}
+          {project.tags.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
         </ul>
       )}
+
+      <div className="project-card__links">
+        {codeUrl && (
+          <a className="project-card__link" href={codeUrl} target="_blank" rel="noreferrer">
+            Code
+          </a>
+        )}
+        {demoUrl && (
+          <a className="project-card__link" href={demoUrl} target="_blank" rel="noreferrer">
+            Démo
+          </a>
+        )}
+      </div>
     </article>
   );
 }

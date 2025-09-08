@@ -12,7 +12,10 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="header__nav">
-        <NavLink className="header__brand" to="/">Sandrine Pichla</NavLink>
+        <NavLink className="header__brand" to="/">
+          <span className="header__role">Informaticienne</span>
+          <span className="header__name">Sandrine Pichla</span>
+        </NavLink>
         <ul className="header__menu">
           {LINKS.map(l => (
             <li key={l.to}>
